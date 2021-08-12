@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+/*공통 */
+* {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: white;
+  box-sizing: border-box;
+}
+html {
+  font-size: 30px;
+  height: 100vh;
+}
+body {
+  margin: 0;
+  background-image: url("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcN72A9%2FbtqTfC1b0DJ%2F31mjCRfHrXaKn4pMy1xK4k%2Fimg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+dl,
+dt,
+dd {
+  list-style-type: none;
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+header {
+  height: 7vw;
+  position: relative;
+}
+
+header::after {
+  clear: left;
+  content: "";
+  display: block;
+}
+
+header .visible::after {
+  clear: left;
+  content: "";
+  display: block;
+}
+header .visible {
+  margin: 10px 0 0 20px;
+}
+
+.dday-open,
+.dtitle {
+  float: left;
+}
+
+.dtitle {
+  font-weight: bolder;
+  font-size: 0.6rem;
+  padding-top: 8px;
+}
+
+.dday-open {
+  background-color: transparent;
+  height: 30px;
+}
+
+header #resultdday {
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 10px;
+  left: 45%;
+  font-weight: 500;
+}
+
+#todo-list li {
+  margin-bottom: 10px;
+}
+
+#clock {
+  font-size: 4rem;
+  margin: 0;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+a {
+  margin: 20px 0 20px 0;
+  text-decoration: none;
+}
+
+button {
+    border: none;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.xi-check {
+  margin: 0 10px 0 20px;
+}
+
+#todo-form input {
+  border: none;
+  border-bottom: 2px solid white;
+  background-color: transparent;
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px 0 10px 0;
+  width: calc(100% / 3);
+  height: 20%;
+  font-size: 1rem;
+}
+
+.join input,
+.login input {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+#todo-form input::placeholder,
+#dday-form input::placeholder {
+  color: white;
+}
+
+#todo-form input:focus,
+#dday-form input:focus {
+  outline: none;
+}
+
+#dday-form:after {
+  display: block;
+  content: "";
+  clear: left;
+}
+
+#dday-form input {
+  margin-left: 10px;
+  float: left;
+  font-size: 0.5rem;
+  width: calc(100% / 6);
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+#dday-form {
+  width: 30%;
+  margin-left: 20px;
+}
+
+#todo-form {
+  position: relative;
+}
+
+#todo-form span {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+form input[type="submit"] {
+  color: white;
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+dd input[type] {
+  color: black;
+}
+
+dl {
+  margin: 10px 0 10px 0;
+}
+
+

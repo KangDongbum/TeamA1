@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maxium-scale=2.0, minimum-scale=0.5, width=device-width">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Todo List</title>
+
+  </head>
+  <body>
+	 <header>
+		  <div class="visible">
+			<button class="dday-open"><i class="xi-plus-circle-o"></i></button>
+			<div class="dtitle">D-day</div>
+		  </div>
+		  <div id="dday-toggle" class="hidden">
+			<form id="dday-form">
+			 <input id="year" type="text" placeholder="Year" maxlength="4" value='{{ dday.year }}'/>
+			  <input id="month" type="text" placeholder="Month" maxlength="2" value='{{ dday.month }}'/>
+			  <input id="day" type="text" placeholder="Day" maxlength="2" value='{{ dday.day }}'/>
+			  <input id="submit" type="submit" value="입력" />
+			</form>
+		  </div>
+		  <div id="resultdday"></div>
+		</header>
+	<div class='homeicon'>
+		<a href='/'>
+			<i class="xi-home"></i>
+		</a>
+	</div>
+    <h2 id="clock">00:00:00</h2>
+		{% block content %}
+		{% endblock %}
+    
+    {% block time %}
+	<script src="/js/clock.js"></script>
+	{% endblock %}
+
+	{% block dday %}
+	<script src="/js/d-day.js"></script>
+	{% endblock %}
+	
+	<iframe name='iframHidden' width='100%' height='500' frameborder='0' style='display: none;'></iframe>
+  </body>
+</html>
