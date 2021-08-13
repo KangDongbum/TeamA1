@@ -13,9 +13,21 @@ module.exports = async (req,res,next) => {
     }
   }
   
-  const ddayPath = path.join(__dirname, "../data/date/dday.json");
-  let dday = await fs.readFile(ddayPath);
-  dday = JSON.parse(dday.toString());
+  let dday;
+  try {
+    const ddayPath = path.join(__dirname, "../data/date/dday.json");
+    dday = await fs.readFile(ddayPath);
+    dday = JSON.parse(dday.toString());
+  } catch (err) {
+    if (err.code == "ENOENT") {
+      // dday.json파일이 없는경우
+      /*
+      필요하면 dday.json파일 생성 추가
+      */
+      dday = null;
+    }
+  }
+
   res.locals.dday = dday;
 
   next();
