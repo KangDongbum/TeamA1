@@ -42,7 +42,7 @@ function calcDday(ddayValue) {
 		resultDday.innerText= `D - Day`;
 	}
 
-};
+}
 
 function init() {
   if (

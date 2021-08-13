@@ -13,7 +13,7 @@ module.exports = async (req,res,next) => {
     }
   }
   
-  let dday;
+   let dday;
   try {
     const ddayPath = path.join(__dirname, "../data/date/dday.json");
     dday = await fs.readFile(ddayPath);
